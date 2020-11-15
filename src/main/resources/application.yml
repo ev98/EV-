@@ -1,0 +1,7 @@
+spring:
+  thymeleaf:
+    cache: false
+  profiles:
+    active: dev
+
+comment.avatar: https://ss1.baidu.com/6ON1bjeh1BF3odCf/it/u=774693901,3650458901&fm=15&gp=0.jpg

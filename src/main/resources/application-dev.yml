@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    username: ev
+    password: a1301493116
+    url: jdbc:mysql://39.105.50.121:3306/blog?serverTimezone=GMT%2B8&characterEncoding=utf-8&useUnicode=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+
+comment.avatar: https://ss1.baidu.com/6ON1bjeh1BF3odCf/it/u=774693901,3650458901&fm=15&gp=0.jpg
+
+
+pagehelper:                #分页插件
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params:
+
+mybatis:
+  type-aliases-package: com.ev.blog.pojo   #设置别名
+  mapper-locations: classpath:mapper/*.xml   #ָ指定myBatis的核心配置文件与Mapper映射文件
+
+logging:
+  level:
+    com.ev.blog: debug

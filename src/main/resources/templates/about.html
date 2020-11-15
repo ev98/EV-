@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head  th:replace="_fragments :: head(~{::title})">
+  <title>EVの客栈|关于我</title>
+</head>
+
+<body class="aboutme-bg">
+
+  <!--头部导航-->
+  <nav th:replace="_fragments :: menu(5)" ></nav>
+
+  <!--中间内容-->
+  <div  class="m-container m-padded-tb-big animated fadeIn">
+    <div class="ui container">
+      <div class="ui stackable grid">
+        <div class="eleven wide column">
+          <div class="ui segment">
+            <img th:src="@{/images/aboutme.jpg}" alt="" class="ui rounded image">
+          </div>
+        </div>
+
+        <div class="five wide column m-opacity-mini">
+          <div class="ui top attached segment">
+            <div class="ui header">关于我</div>
+          </div>
+          <div class="ui attached segment">
+            <p class="m-text">EV，一个热爱编程的java菜鸟，一个爱吃甜食的沙雕青年</p>
+            <p class="m-text">爱编程，爱美食，爱幻想，也爱听着民谣一个人自嗨，更爱Roguelike，即使一遍遍的死亡，能重来又有何妨，我没什么特别，我很特别，我是EV</p>
+            <p class="m-text">既然选择了远方，即使天寒地冻，路遥马亡，我本就一无所有，又有何惧！</p>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui orange basic left pointing label">编程</div>
+            <div class="ui orange basic left pointing label">甜食</div>
+            <div class="ui orange basic left pointing label">看电影</div>
+            <div class="ui orange basic left pointing label">民谣</div>
+            <div class="ui orange basic left pointing label">Roguelike</div>
+          </div>
+          <div class="ui attached segment">
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">ssm</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">springboot</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">springcloud</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">mysql</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">html</div>
+            <div class="ui teal basic left pointing label m-margin-tb-tiny">linux</div>
+          </div>
+          <div class="ui bottom attached segment">
+            <a href="https://github.com/ev98" class="ui circular icon button" target="_blank"><i class="github icon"></i></a>
+            <a href="#" class="ui wechat circular icon button"><i class="weixin icon"></i></a>
+            <a href="#" class="ui qq circular icon button" data-content="1301493116" data-position="bottom center"><i class="qq icon"></i></a>
+          </div>
+
+          <div class="ui wechat-qr flowing popup transition hidden">
+            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br>
+  <br>
+
+  <!--底部footer-->
+  <footer th:replace="_fragments :: footer" class="ui inverted vertical segment m-padded-tb-massive">
+
+  </footer>
+
+  <!--导入的script-->
+  <th:block th:replace="_fragments :: script">
+
+  </th:block>
+
+  <script>
+    $('.menu.toggle').click(function () {
+      $('.m-item').toggleClass('m-mobile-hide');
+    });
+
+    $('.wechat').popup({
+      popup : $('.wechat-qr'),
+      position: 'bottom center'
+    });
+    $('.qq').popup();
+
+  </script>
+</body>
+</html>
